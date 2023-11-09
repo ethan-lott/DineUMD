@@ -26,15 +26,15 @@ struct DiningHallList: View {
                 
                 ForEach(diningData.diningHalls) { diningHall in
                     NavigationLink {
-                        //LandmarkDetail(landmark: landmark)
+                        DiningHallDetail(diningHall: diningHall)
                     } label: {
                         DiningHallRow(diningHall: diningHall)
                     }
                 }
             }
-            .navigationTitle("Landmarks")
+            .navigationTitle("Dining Halls")
         } detail: {
-            Text("Select a Landmark")
+            Text("Select a Dining Hall")
         }
     }
 }

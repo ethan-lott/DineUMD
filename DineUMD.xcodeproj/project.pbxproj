@@ -23,6 +23,7 @@
 		D3BB708F2AFD986800EFAC23 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB708E2AFD986800EFAC23 /* Item.swift */; };
 		D3BB70912AFD988900EFAC23 /* Restriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70902AFD988900EFAC23 /* Restriction.swift */; };
 		D3BB70932AFD995D00EFAC23 /* diningData.json in Resources */ = {isa = PBXBuildFile; fileRef = D3BB70922AFD995D00EFAC23 /* diningData.json */; };
+		D3F19ED02AFD9E1F004E5131 /* DiningHallDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F19ECF2AFD9E1F004E5131 /* DiningHallDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D3BB708E2AFD986800EFAC23 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D3BB70902AFD988900EFAC23 /* Restriction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restriction.swift; sourceTree = "<group>"; };
 		D3BB70922AFD995D00EFAC23 /* diningData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = diningData.json; path = ../../../Downloads/diningData.json; sourceTree = "<group>"; };
+		D3F19ECF2AFD9E1F004E5131 /* DiningHallDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningHallDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				D3BB70582AFD8ECF00EFAC23 /* ContentView.swift */,
 				D3BB70802AFD8FC000EFAC23 /* DiningData.swift */,
 				D3BB70842AFD90B100EFAC23 /* DiningHallList.swift */,
+				D3F19ECF2AFD9E1F004E5131 /* DiningHallDetail.swift */,
 				D3BB70862AFD919900EFAC23 /* DiningHallRow.swift */,
 				D3BB70922AFD995D00EFAC23 /* diningData.json */,
 				D3BB70942AFD9C2700EFAC23 /* Structs */,
@@ -303,6 +306,7 @@
 				D3BB70812AFD8FC000EFAC23 /* DiningData.swift in Sources */,
 				D3BB70572AFD8ECF00EFAC23 /* DineUMDApp.swift in Sources */,
 				D3BB70852AFD90B100EFAC23 /* DiningHallList.swift in Sources */,
+				D3F19ED02AFD9E1F004E5131 /* DiningHallDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
