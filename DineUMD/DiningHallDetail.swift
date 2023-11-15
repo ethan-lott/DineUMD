@@ -10,84 +10,31 @@ import SwiftUI
 struct DiningHallDetail: View {
     @Environment(DiningData.self) var diningData
     var diningHall: DiningHall
-    
     var diningHallIndex: Int {
         diningData.diningHalls.firstIndex(where: { $0.id == diningHall.id })!
     }
     
     var body: some View {
         @Bindable var diningData = diningData
+        let threeMeals = (diningHall.meals.count == 3)
         
-        ScrollView {
-//            MapView(coordinate: landmark.locationCoordinate)
-//                .frame(height: 300)
-            
-//            CircleImage(image: landmark.image)
-//                .offset(y: -130)
-//                .padding(.bottom, -130)
-            
-            VStack(alignment: .leading) {
-                HStack{
-                    Text(diningHall.name)
-                        .font(.title)
-                    
-//                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+        TabView {
+            MealDetail(diningHall: diningHall, mealID: 0)
+                .tabItem {
+                    Label(diningHall.meals[0].name, systemImage: "sunrise")
                 }
-
-                
-                Divider()
-                HStack {
-                    Button {
-                        
-                    } label: {
-                        Text("Breakfast")
-                    }
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Text("Lunch")
-                    }
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Text("Dinner")
-                    }
+            MealDetail(diningHall: diningHall, mealID: 1)
+                .tabItem {
+                    Label(diningHall.meals[1].name, systemImage: threeMeals ? "sun.max" : "sunset")
                 }
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-                .padding()
-                Divider()
-                
-                Text(diningHall.meals[1].stations[0].name)
-                Text(diningHall.meals[1].stations[1].name)
-                Text(diningHall.meals[1].stations[2].name)
-                Text(diningHall.meals[1].stations[3].name)
-                Text(diningHall.meals[1].stations[4].name)
-                Text(diningHall.meals[1].stations[5].name)
-                Text(diningHall.meals[1].stations[6].name)
-                Text(diningHall.meals[1].stations[7].name)
-                Text(diningHall.meals[1].stations[8].name)
-                Text(diningHall.meals[1].stations[9].name)
-//                List {
-    //                Toggle(isOn: $showFavoritesOnly) {
-    //                    Text("Favorites only")
-    //                }
-                    
-//                    ForEach(diningHall.meals[0].stations) { station in
-//                        NavigationLink {
-//                            DiningHallDetail(diningHall: diningHall)
-//                        } label: {
-//                            DiningHallRow(diningHall: diningHall)
-//                        }
-//                    }
-//                }
+            if (threeMeals) {
+                MealDetail(diningHall: diningHall, mealID: 2)
+                    .tabItem {
+                        Label(diningHall.meals[2].name, systemImage: "sunset")
+                    }
             }
-            .padding()
         }
-        .navigationTitle(diningHall.name)
-        .navigationBarTitleDisplayMode(.inline)
+
     }
 }
 
