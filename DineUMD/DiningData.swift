@@ -9,7 +9,7 @@ import Foundation
 
 @Observable
 class DiningData {
-    var diningHalls: [DiningHall] = load("diningData.json")
+    var menuDates: [MenuDate] = load("diningMenus.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

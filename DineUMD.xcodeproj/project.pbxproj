@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D308532F2B22894500F02655 /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = D308532E2B22894400F02655 /* diningMenus.json */; };
+		D30853312B228B5100F02655 /* MenuDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853302B228B5100F02655 /* MenuDate.swift */; };
+		D30853332B228C5B00F02655 /* MenuDateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853322B228C5B00F02655 /* MenuDateList.swift */; };
+		D30853372B22926700F02655 /* StationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853362B22926700F02655 /* StationRow.swift */; };
+		D30853392B22932100F02655 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853382B22932100F02655 /* StationDetail.swift */; };
 		D3BB70572AFD8ECF00EFAC23 /* DineUMDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70562AFD8ECF00EFAC23 /* DineUMDApp.swift */; };
 		D3BB70592AFD8ECF00EFAC23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70582AFD8ECF00EFAC23 /* ContentView.swift */; };
 		D3BB705B2AFD8ED000EFAC23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BB705A2AFD8ED000EFAC23 /* Assets.xcassets */; };
@@ -22,7 +27,6 @@
 		D3BB708D2AFD980900EFAC23 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB708C2AFD980900EFAC23 /* Station.swift */; };
 		D3BB708F2AFD986800EFAC23 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB708E2AFD986800EFAC23 /* Item.swift */; };
 		D3BB70912AFD988900EFAC23 /* Restriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70902AFD988900EFAC23 /* Restriction.swift */; };
-		D3DEC1152B042DEC0020CB66 /* diningData.json in Resources */ = {isa = PBXBuildFile; fileRef = D3DEC1142B042DEC0020CB66 /* diningData.json */; };
 		D3DEC1172B042F840020CB66 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DEC1162B042F840020CB66 /* MealDetail.swift */; };
 		D3F19ED02AFD9E1F004E5131 /* DiningHallDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F19ECF2AFD9E1F004E5131 /* DiningHallDetail.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D308532E2B22894400F02655 /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningMenus.json; sourceTree = "<group>"; };
+		D30853302B228B5100F02655 /* MenuDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDate.swift; sourceTree = "<group>"; };
+		D30853322B228C5B00F02655 /* MenuDateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDateList.swift; sourceTree = "<group>"; };
+		D30853362B22926700F02655 /* StationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRow.swift; sourceTree = "<group>"; };
+		D30853382B22932100F02655 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
 		D3BB70532AFD8ECF00EFAC23 /* DineUMD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DineUMD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BB70562AFD8ECF00EFAC23 /* DineUMDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DineUMDApp.swift; sourceTree = "<group>"; };
 		D3BB70582AFD8ECF00EFAC23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,7 +72,6 @@
 		D3BB708C2AFD980900EFAC23 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		D3BB708E2AFD986800EFAC23 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D3BB70902AFD988900EFAC23 /* Restriction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restriction.swift; sourceTree = "<group>"; };
-		D3DEC1142B042DEC0020CB66 /* diningData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningData.json; sourceTree = "<group>"; };
 		D3DEC1162B042F840020CB66 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		D3F19ECF2AFD9E1F004E5131 /* DiningHallDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningHallDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +104,7 @@
 		D3BB704A2AFD8ECF00EFAC23 = {
 			isa = PBXGroup;
 			children = (
+				D30853382B22932100F02655 /* StationDetail.swift */,
 				D3BB70552AFD8ECF00EFAC23 /* DineUMD */,
 				D3BB70662AFD8ED000EFAC23 /* DineUMDTests */,
 				D3BB70702AFD8ED000EFAC23 /* DineUMDUITests */,
@@ -117,13 +126,15 @@
 			isa = PBXGroup;
 			children = (
 				D3BB70562AFD8ECF00EFAC23 /* DineUMDApp.swift */,
+				D308532E2B22894400F02655 /* diningMenus.json */,
 				D3BB70582AFD8ECF00EFAC23 /* ContentView.swift */,
 				D3BB70802AFD8FC000EFAC23 /* DiningData.swift */,
 				D3BB70842AFD90B100EFAC23 /* DiningHallList.swift */,
-				D3DEC1142B042DEC0020CB66 /* diningData.json */,
+				D30853322B228C5B00F02655 /* MenuDateList.swift */,
 				D3F19ECF2AFD9E1F004E5131 /* DiningHallDetail.swift */,
 				D3DEC1162B042F840020CB66 /* MealDetail.swift */,
 				D3BB70862AFD919900EFAC23 /* DiningHallRow.swift */,
+				D30853362B22926700F02655 /* StationRow.swift */,
 				D3BB70942AFD9C2700EFAC23 /* Structs */,
 				D3BB70902AFD988900EFAC23 /* Restriction.swift */,
 				D3BB705A2AFD8ED000EFAC23 /* Assets.xcassets */,
@@ -161,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				D3BB70822AFD901000EFAC23 /* DiningHall.swift */,
+				D30853302B228B5100F02655 /* MenuDate.swift */,
 				D3BB708A2AFD977F00EFAC23 /* Meal.swift */,
 				D3BB708C2AFD980900EFAC23 /* Station.swift */,
 				D3BB708E2AFD986800EFAC23 /* Item.swift */,
@@ -272,8 +284,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D308532F2B22894500F02655 /* diningMenus.json in Resources */,
 				D3BB705E2AFD8ED000EFAC23 /* Preview Assets.xcassets in Resources */,
-				D3DEC1152B042DEC0020CB66 /* diningData.json in Resources */,
 				D3BB705B2AFD8ED000EFAC23 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,15 +314,19 @@
 				D3BB70872AFD919900EFAC23 /* DiningHallRow.swift in Sources */,
 				D3BB708F2AFD986800EFAC23 /* Item.swift in Sources */,
 				D3BB70592AFD8ECF00EFAC23 /* ContentView.swift in Sources */,
+				D30853392B22932100F02655 /* StationDetail.swift in Sources */,
 				D3BB708D2AFD980900EFAC23 /* Station.swift in Sources */,
 				D3BB70912AFD988900EFAC23 /* Restriction.swift in Sources */,
 				D3BB708B2AFD977F00EFAC23 /* Meal.swift in Sources */,
 				D3BB70832AFD901000EFAC23 /* DiningHall.swift in Sources */,
 				D3BB70812AFD8FC000EFAC23 /* DiningData.swift in Sources */,
+				D30853332B228C5B00F02655 /* MenuDateList.swift in Sources */,
 				D3BB70572AFD8ECF00EFAC23 /* DineUMDApp.swift in Sources */,
 				D3DEC1172B042F840020CB66 /* MealDetail.swift in Sources */,
 				D3BB70852AFD90B100EFAC23 /* DiningHallList.swift in Sources */,
+				D30853372B22926700F02655 /* StationRow.swift in Sources */,
 				D3F19ED02AFD9E1F004E5131 /* DiningHallDetail.swift in Sources */,
+				D30853312B228B5100F02655 /* MenuDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

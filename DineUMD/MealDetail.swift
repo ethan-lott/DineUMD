@@ -26,27 +26,22 @@ struct MealDetail: View {
                 HStack {
                     Text(diningHall.name)
                         .font(.title)
-                    
-                    DatePicker(
-                        "",
-                        selection: $date,
-                        in: dateRange,
-                        displayedComponents: [.date]
-                    )
                 }
                 
-
                 Divider()
-                
-                Text(diningHall.meals[mealID].stations[0].name)
-                Text(diningHall.meals[mealID].stations[1].name)
-                if (diningHall.meals[mealID].stations.count > 2) {
-                    Text(diningHall.meals[mealID].stations[2].name)
-                    Text(diningHall.meals[mealID].stations[3].name)
-                    Text(diningHall.meals[mealID].stations[4].name)
-                    Text(diningHall.meals[mealID].stations[5].name)
+                NavigationSplitView {
+                    List {
+                        ForEach(diningHall.meals[mealID].stations) { station in
+                            NavigationLink {
+                                StationDetail(station: station)
+                            } label: {
+                                StationRow(station: station)
+                            }
+                        }
+                    }
+                } detail: {
+                    Text("Select a Station")
                 }
-                
             }
             .padding()
         }
@@ -57,6 +52,6 @@ struct MealDetail: View {
 
 #Preview {
     let diningData = DiningData()
-    return MealDetail(diningHall: diningData.diningHalls[2], mealID: 0)
+    return MealDetail(diningHall: diningData.menuDates[0].halls[2], mealID: 0)
         .environment(diningData)
 }

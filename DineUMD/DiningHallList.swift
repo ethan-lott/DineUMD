@@ -9,11 +9,15 @@ import SwiftUI
 
 struct DiningHallList: View {
     @Environment(DiningData.self) var diningData
+    var menuDate: MenuDate
+    var menuDateIndex: Int {
+        diningData.menuDates.firstIndex(where: { $0.id == menuDate.id })!
+    }
     
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(diningData.diningHalls) { diningHall in
+                ForEach(menuDate.halls) { diningHall in
                     NavigationLink {
                         DiningHallDetail(diningHall: diningHall)
                     } label: {
@@ -29,6 +33,6 @@ struct DiningHallList: View {
 }
 
 #Preview {
-    DiningHallList()
+    DiningHallList(menuDate: DiningData().menuDates[0])
         .environment(DiningData())
 }

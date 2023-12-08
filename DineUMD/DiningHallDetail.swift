@@ -11,7 +11,7 @@ struct DiningHallDetail: View {
     @Environment(DiningData.self) var diningData
     var diningHall: DiningHall
     var diningHallIndex: Int {
-        diningData.diningHalls.firstIndex(where: { $0.id == diningHall.id })!
+        diningData.menuDates[0].halls.firstIndex(where: { $0.id == diningHall.id })!
     }
     
     var body: some View {
@@ -40,6 +40,6 @@ struct DiningHallDetail: View {
 
 #Preview {
     let diningData = DiningData()
-    return DiningHallDetail(diningHall: diningData.diningHalls[2])
+    return DiningHallDetail(diningHall: diningData.menuDates[0].halls[2])
         .environment(diningData)
 }
