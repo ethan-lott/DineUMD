@@ -14,11 +14,13 @@ struct ItemDetail: View {
     
     var body: some View {
         Text(item.name)
+            .bold()
+        Text(item.restrictions.description)
     }
 }
 
 #Preview {
     let diningData = DiningData()
-    return StationDetail(station: diningData.menuDates[0].halls[0].meals[0].stations[0], meal: diningData.menuDates[0].halls[0].meals[0])
+    return ItemDetail(item: diningData.menuDates[0].halls[0].meals[0].stations[0].items[1], station: diningData.menuDates[0].halls[0].meals[0].stations[0])
         .environment(diningData)
 }

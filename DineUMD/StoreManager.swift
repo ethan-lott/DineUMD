@@ -12,22 +12,28 @@ class StorageManager: ObservableObject {
     let storage = Storage.storage()
     
     func downloadMenus() {
-        print("successfully called dowload function")
-        // Create a storage reference
-        let storageRef = storage.reference().child("gs://dineumd.appspot.com/menuFolder/diningMenus.json")
-        
-        // Create local filesystem URL
-        let localURL = URL(string: "DineUMD/diningMenus.json")!
-        
-        // Download to the local filesystem
-        _ = storageRef.write(toFile: localURL) { url, error in
-          if let error = error {
-            // Uh-oh, an error occurred!
-              print(error)
-          } else {
-            // Local file URL is returned
-              print("lowkey worked")
-          }
-        }
+//        print("successfully called download function")
+//        // Create a storage reference
+//        let storageRef = storage.reference().child("/menuFolder/diningMenus.json")
+//        
+//        // Create local filesystem URL
+////        let localURL = URL(string: "DineUMD/diningMenus.json")!
+//        
+//        // Download to the local filesystem
+//        storageRef.getData(maxSize: 5*1024*1024) { data, error in
+//          if let error = error {
+//            // Uh-oh, an error occurred!
+//              print(error)
+//          } else {
+//            // Local file URL is returned
+//              do {
+//                  let jsonArray = try JSONSerialization.jsonObject(with: data.unsafelyUnwrapped)
+//                  print(jsonArray[0])
+//              }
+//              catch {
+//                  print("fail")
+//              }
+//          }
+//        }
     }
 }
