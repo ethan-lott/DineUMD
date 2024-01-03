@@ -16,10 +16,11 @@ struct DineUMDApp: App {
         let sm = StorageManager()
         sm.downloadMenus()
     }
-    
+
     var body: some Scene {
         WindowGroup {
-            MenuDateList()
+            ContentView()
+                .environmentObject(DiningData())
         }
     }
 }

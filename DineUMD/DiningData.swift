@@ -8,7 +8,7 @@
 import Foundation
 
 @Observable
-class DiningData {
+class DiningData: ObservableObject {
     var menuDates: [MenuDate] = load("diningMenus.json")
 }
 

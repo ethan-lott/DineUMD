@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DiningHallList: View {
+struct MenuDateDetail: View {
     @Environment(DiningData.self) var diningData
     var menuDate: MenuDate
     var menuDateIndex: Int {
@@ -15,13 +15,15 @@ struct DiningHallList: View {
     }
     
     var body: some View {
+        
         NavigationSplitView {
             List {
                 ForEach(menuDate.halls) { diningHall in
                     NavigationLink {
-                        DiningHallDetail(diningHall: diningHall)
+                        DiningHallDetail(diningHall: diningHall, menuDate: menuDate)
                     } label: {
-                        DiningHallRow(diningHall: diningHall)
+                        Text(diningHall.name)
+//                        DiningHallRow(diningHall: diningHall)
                     }
                 }
             }
@@ -29,10 +31,12 @@ struct DiningHallList: View {
         } detail: {
             Text("Select a Dining Hall")
         }
+        .navigationTitle(menuDate.date)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    DiningHallList(menuDate: DiningData().menuDates[0])
+    MenuDateDetail(menuDate: DiningData().menuDates[0])
         .environment(DiningData())
 }

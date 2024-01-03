@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		885494EB2B4605D900141058 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 885494EA2B4605D900141058 /* FirebaseStorage */; };
 		885494ED2B46061200141058 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885494EC2B46061200141058 /* StoreManager.swift */; };
 		885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 885494EE2B460E7B00141058 /* GoogleService-Info.plist */; };
 		D308532F2B22894500F02655 /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = D308532E2B22894400F02655 /* diningMenus.json */; };
+=======
+		B4D0A4A02B4607E0007D5AF3 /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = B4D0A49F2B4607E0007D5AF3 /* diningMenus.json */; };
+		B4D0A4A22B460D38007D5AF3 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D0A4A12B460D38007D5AF3 /* ItemDetail.swift */; };
+>>>>>>> main
 		D30853312B228B5100F02655 /* MenuDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853302B228B5100F02655 /* MenuDate.swift */; };
 		D30853332B228C5B00F02655 /* MenuDateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853322B228C5B00F02655 /* MenuDateList.swift */; };
 		D30853372B22926700F02655 /* StationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853362B22926700F02655 /* StationRow.swift */; };
@@ -24,7 +29,7 @@
 		D3BB70742AFD8ED000EFAC23 /* DineUMDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70732AFD8ED000EFAC23 /* DineUMDUITestsLaunchTests.swift */; };
 		D3BB70812AFD8FC000EFAC23 /* DiningData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70802AFD8FC000EFAC23 /* DiningData.swift */; };
 		D3BB70832AFD901000EFAC23 /* DiningHall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70822AFD901000EFAC23 /* DiningHall.swift */; };
-		D3BB70852AFD90B100EFAC23 /* DiningHallList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70842AFD90B100EFAC23 /* DiningHallList.swift */; };
+		D3BB70852AFD90B100EFAC23 /* MenuDateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70842AFD90B100EFAC23 /* MenuDateDetail.swift */; };
 		D3BB70872AFD919900EFAC23 /* DiningHallRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB70862AFD919900EFAC23 /* DiningHallRow.swift */; };
 		D3BB708B2AFD977F00EFAC23 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB708A2AFD977F00EFAC23 /* Meal.swift */; };
 		D3BB708D2AFD980900EFAC23 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BB708C2AFD980900EFAC23 /* Station.swift */; };
@@ -52,9 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		885494EC2B46061200141058 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		885494EE2B460E7B00141058 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D308532E2B22894400F02655 /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningMenus.json; sourceTree = "<group>"; };
+=======
+		B4D0A49F2B4607E0007D5AF3 /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningMenus.json; sourceTree = "<group>"; };
+		B4D0A4A12B460D38007D5AF3 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+>>>>>>> main
 		D30853302B228B5100F02655 /* MenuDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDate.swift; sourceTree = "<group>"; };
 		D30853322B228C5B00F02655 /* MenuDateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDateList.swift; sourceTree = "<group>"; };
 		D30853362B22926700F02655 /* StationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRow.swift; sourceTree = "<group>"; };
@@ -71,7 +81,7 @@
 		D3BB70732AFD8ED000EFAC23 /* DineUMDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DineUMDUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D3BB70802AFD8FC000EFAC23 /* DiningData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningData.swift; sourceTree = "<group>"; };
 		D3BB70822AFD901000EFAC23 /* DiningHall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningHall.swift; sourceTree = "<group>"; };
-		D3BB70842AFD90B100EFAC23 /* DiningHallList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningHallList.swift; sourceTree = "<group>"; };
+		D3BB70842AFD90B100EFAC23 /* MenuDateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDateDetail.swift; sourceTree = "<group>"; };
 		D3BB70862AFD919900EFAC23 /* DiningHallRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningHallRow.swift; sourceTree = "<group>"; };
 		D3BB708A2AFD977F00EFAC23 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		D3BB708C2AFD980900EFAC23 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
@@ -110,7 +120,6 @@
 		D3BB704A2AFD8ECF00EFAC23 = {
 			isa = PBXGroup;
 			children = (
-				D30853382B22932100F02655 /* StationDetail.swift */,
 				D3BB70552AFD8ECF00EFAC23 /* DineUMD */,
 				D3BB70662AFD8ED000EFAC23 /* DineUMDTests */,
 				D3BB70702AFD8ED000EFAC23 /* DineUMDUITests */,
@@ -131,19 +140,23 @@
 		D3BB70552AFD8ECF00EFAC23 /* DineUMD */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				885494EE2B460E7B00141058 /* GoogleService-Info.plist */,
+=======
+				B4D0A49F2B4607E0007D5AF3 /* diningMenus.json */,
+>>>>>>> main
 				D3BB70562AFD8ECF00EFAC23 /* DineUMDApp.swift */,
-				D308532E2B22894400F02655 /* diningMenus.json */,
 				D3BB70582AFD8ECF00EFAC23 /* ContentView.swift */,
 				D3BB70802AFD8FC000EFAC23 /* DiningData.swift */,
-				D3BB70842AFD90B100EFAC23 /* DiningHallList.swift */,
+				D3BB70842AFD90B100EFAC23 /* MenuDateDetail.swift */,
 				D30853322B228C5B00F02655 /* MenuDateList.swift */,
 				D3F19ECF2AFD9E1F004E5131 /* DiningHallDetail.swift */,
 				D3DEC1162B042F840020CB66 /* MealDetail.swift */,
+				D30853382B22932100F02655 /* StationDetail.swift */,
+				B4D0A4A12B460D38007D5AF3 /* ItemDetail.swift */,
 				D3BB70862AFD919900EFAC23 /* DiningHallRow.swift */,
 				D30853362B22926700F02655 /* StationRow.swift */,
 				D3BB70942AFD9C2700EFAC23 /* Structs */,
-				D3BB70902AFD988900EFAC23 /* Restriction.swift */,
 				D3BB705A2AFD8ED000EFAC23 /* Assets.xcassets */,
 				D3BB705C2AFD8ED000EFAC23 /* Preview Content */,
 				885494EC2B46061200141058 /* StoreManager.swift */,
@@ -179,6 +192,7 @@
 		D3BB70942AFD9C2700EFAC23 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				D3BB70902AFD988900EFAC23 /* Restriction.swift */,
 				D3BB70822AFD901000EFAC23 /* DiningHall.swift */,
 				D30853302B228B5100F02655 /* MenuDate.swift */,
 				D3BB708A2AFD977F00EFAC23 /* Meal.swift */,
@@ -298,10 +312,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				D308532F2B22894500F02655 /* diningMenus.json in Resources */,
 				885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */,
+=======
+>>>>>>> main
 				D3BB705E2AFD8ED000EFAC23 /* Preview Assets.xcassets in Resources */,
 				D3BB705B2AFD8ED000EFAC23 /* Assets.xcassets in Resources */,
+				B4D0A4A02B4607E0007D5AF3 /* diningMenus.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +357,10 @@
 				885494ED2B46061200141058 /* StoreManager.swift in Sources */,
 				D3BB70572AFD8ECF00EFAC23 /* DineUMDApp.swift in Sources */,
 				D3DEC1172B042F840020CB66 /* MealDetail.swift in Sources */,
-				D3BB70852AFD90B100EFAC23 /* DiningHallList.swift in Sources */,
+				D3BB70852AFD90B100EFAC23 /* MenuDateDetail.swift in Sources */,
 				D30853372B22926700F02655 /* StationRow.swift in Sources */,
 				D3F19ED02AFD9E1F004E5131 /* DiningHallDetail.swift in Sources */,
+				B4D0A4A22B460D38007D5AF3 /* ItemDetail.swift in Sources */,
 				D30853312B228B5100F02655 /* MenuDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

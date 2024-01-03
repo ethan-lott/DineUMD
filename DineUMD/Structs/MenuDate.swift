@@ -7,9 +7,6 @@
 
 import Foundation
 
-import SwiftUI
-import CoreLocation
-
 struct MenuDate: Hashable, Codable, Identifiable {
     var date: String
     var id: Int

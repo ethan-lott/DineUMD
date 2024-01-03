@@ -11,11 +11,12 @@ struct MenuDateList: View {
     @Environment(DiningData.self) var diningData
     
     var body: some View {
+        
         NavigationSplitView {
             List {
                 ForEach(diningData.menuDates) { menuDate in
                     NavigationLink {
-                        DiningHallList(menuDate: menuDate)
+                        MenuDateDetail(menuDate: menuDate)
                     } label: {
                         Text(menuDate.date)
                     }

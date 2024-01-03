@@ -10,7 +10,10 @@ import SwiftUI
 struct MealDetail: View {
     @Environment(DiningData.self) var diningData
     var diningHall: DiningHall
-    var mealID: Int
+    var meal: Meal
+    var mealIndex: Int {
+        diningHall.meals.firstIndex(where: { $0.id == meal.id })!
+    }
     
     @State private var date = Date()
     var dateRange: ClosedRange<Date> {
@@ -20,38 +23,28 @@ struct MealDetail: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading){
-                
-                HStack {
-                    Text(diningHall.name)
-                        .font(.title)
-                }
-                
-                Divider()
-                NavigationSplitView {
-                    List {
-                        ForEach(diningHall.meals[mealID].stations) { station in
-                            NavigationLink {
-                                StationDetail(station: station)
-                            } label: {
-                                StationRow(station: station)
-                            }
-                        }
+        NavigationSplitView {
+            List {
+                ForEach(meal.stations) { station in
+                    NavigationLink {
+                        StationDetail(station: station, meal: meal)
+                    } label: {
+                        Text(station.name)
+//                        StationRow(station: station)
                     }
-                } detail: {
-                    Text("Select a Station")
                 }
             }
-            .padding()
+            .navigationTitle("Stations")
+        } detail: {
+            Text("Select a Station")
         }
-        .navigationTitle(diningHall.name)
+        .navigationTitle(meal.name)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
     let diningData = DiningData()
-    return MealDetail(diningHall: diningData.menuDates[0].halls[2], mealID: 0)
+    return MealDetail(diningHall: diningData.menuDates[0].halls[0], meal: diningData.menuDates[0].halls[0].meals[0])
         .environment(diningData)
 }
