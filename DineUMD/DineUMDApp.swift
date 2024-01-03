@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct DineUMDApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(DiningData())
         }
     }
 }

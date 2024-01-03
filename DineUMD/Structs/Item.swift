@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct Item: Hashable, Codable {
+struct Item: Hashable, Codable, Identifiable {
     var name: String
     var restrictions: [String]
+    var id = UUID()
 }
