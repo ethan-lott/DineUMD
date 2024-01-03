@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+		885494EB2B4605D900141058 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 885494EA2B4605D900141058 /* FirebaseStorage */; };
+		885494ED2B46061200141058 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885494EC2B46061200141058 /* StoreManager.swift */; };
+		885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 885494EE2B460E7B00141058 /* GoogleService-Info.plist */; };
+		D308532F2B22894500F02655 /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = D308532E2B22894400F02655 /* diningMenus.json */; };
+=======
 		B4D0A4A02B4607E0007D5AF3 /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = B4D0A49F2B4607E0007D5AF3 /* diningMenus.json */; };
 		B4D0A4A22B460D38007D5AF3 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D0A4A12B460D38007D5AF3 /* ItemDetail.swift */; };
+>>>>>>> main
 		D30853312B228B5100F02655 /* MenuDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853302B228B5100F02655 /* MenuDate.swift */; };
 		D30853332B228C5B00F02655 /* MenuDateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853322B228C5B00F02655 /* MenuDateList.swift */; };
 		D30853372B22926700F02655 /* StationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853362B22926700F02655 /* StationRow.swift */; };
@@ -50,8 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		885494EC2B46061200141058 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		885494EE2B460E7B00141058 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D308532E2B22894400F02655 /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningMenus.json; sourceTree = "<group>"; };
+=======
 		B4D0A49F2B4607E0007D5AF3 /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningMenus.json; sourceTree = "<group>"; };
 		B4D0A4A12B460D38007D5AF3 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+>>>>>>> main
 		D30853302B228B5100F02655 /* MenuDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDate.swift; sourceTree = "<group>"; };
 		D30853322B228C5B00F02655 /* MenuDateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDateList.swift; sourceTree = "<group>"; };
 		D30853362B22926700F02655 /* StationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRow.swift; sourceTree = "<group>"; };
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885494EB2B4605D900141058 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +140,11 @@
 		D3BB70552AFD8ECF00EFAC23 /* DineUMD */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				885494EE2B460E7B00141058 /* GoogleService-Info.plist */,
+=======
 				B4D0A49F2B4607E0007D5AF3 /* diningMenus.json */,
+>>>>>>> main
 				D3BB70562AFD8ECF00EFAC23 /* DineUMDApp.swift */,
 				D3BB70582AFD8ECF00EFAC23 /* ContentView.swift */,
 				D3BB70802AFD8FC000EFAC23 /* DiningData.swift */,
@@ -141,6 +159,7 @@
 				D3BB70942AFD9C2700EFAC23 /* Structs */,
 				D3BB705A2AFD8ED000EFAC23 /* Assets.xcassets */,
 				D3BB705C2AFD8ED000EFAC23 /* Preview Content */,
+				885494EC2B46061200141058 /* StoreManager.swift */,
 			);
 			path = DineUMD;
 			sourceTree = "<group>";
@@ -199,6 +218,9 @@
 			dependencies = (
 			);
 			name = DineUMD;
+			packageProductDependencies = (
+				885494EA2B4605D900141058 /* FirebaseStorage */,
+			);
 			productName = DineUMD;
 			productReference = D3BB70532AFD8ECF00EFAC23 /* DineUMD.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +293,9 @@
 				Base,
 			);
 			mainGroup = D3BB704A2AFD8ECF00EFAC23;
+			packageReferences = (
+				885494E92B4605D900141058 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D3BB70542AFD8ECF00EFAC23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,6 +312,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				D308532F2B22894500F02655 /* diningMenus.json in Resources */,
+				885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */,
+=======
+>>>>>>> main
 				D3BB705E2AFD8ED000EFAC23 /* Preview Assets.xcassets in Resources */,
 				D3BB705B2AFD8ED000EFAC23 /* Assets.xcassets in Resources */,
 				B4D0A4A02B4607E0007D5AF3 /* diningMenus.json in Resources */,
@@ -324,6 +354,7 @@
 				D3BB70832AFD901000EFAC23 /* DiningHall.swift in Sources */,
 				D3BB70812AFD8FC000EFAC23 /* DiningData.swift in Sources */,
 				D30853332B228C5B00F02655 /* MenuDateList.swift in Sources */,
+				885494ED2B46061200141058 /* StoreManager.swift in Sources */,
 				D3BB70572AFD8ECF00EFAC23 /* DineUMDApp.swift in Sources */,
 				D3DEC1172B042F840020CB66 /* MealDetail.swift in Sources */,
 				D3BB70852AFD90B100EFAC23 /* MenuDateDetail.swift in Sources */,
@@ -660,6 +691,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		885494E92B4605D900141058 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		885494EA2B4605D900141058 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 885494E92B4605D900141058 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3BB704B2AFD8ECF00EFAC23 /* Project object */;
 }

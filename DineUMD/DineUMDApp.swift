@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct DineUMDApp: App {
     
+    init() {
+        FirebaseApp.configure()
+        let sm = StorageManager()
+        sm.downloadMenus()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
