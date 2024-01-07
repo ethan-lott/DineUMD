@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8824850E2B4A37DF002E13DE /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = 8824850D2B4A37DF002E13DE /* diningMenus.json */; };
 		885494EB2B4605D900141058 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 885494EA2B4605D900141058 /* FirebaseStorage */; };
 		885494ED2B46061200141058 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885494EC2B46061200141058 /* StoreManager.swift */; };
 		885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 885494EE2B460E7B00141058 /* GoogleService-Info.plist */; };
-		B4AAF3672B4619730090FEFE /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = B4AAF3662B4619730090FEFE /* diningMenus.json */; };
+		88F48B042B49D16900E5BDF6 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 88F48B032B49D16900E5BDF6 /* SwiftSoup */; };
+		88F48B062B49D1E200E5BDF6 /* MenuScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F48B052B49D1E200E5BDF6 /* MenuScraper.swift */; };
 		B4D0A4A22B460D38007D5AF3 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D0A4A12B460D38007D5AF3 /* ItemDetail.swift */; };
 		D30853312B228B5100F02655 /* MenuDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853302B228B5100F02655 /* MenuDate.swift */; };
 		D30853332B228C5B00F02655 /* MenuDateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30853322B228C5B00F02655 /* MenuDateList.swift */; };
@@ -53,9 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8824850D2B4A37DF002E13DE /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = diningMenus.json; path = ../../../Downloads/diningMenus.json; sourceTree = "<group>"; };
 		885494EC2B46061200141058 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		885494EE2B460E7B00141058 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B4AAF3662B4619730090FEFE /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningMenus.json; sourceTree = "<group>"; };
+		88F48B052B49D1E200E5BDF6 /* MenuScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScraper.swift; sourceTree = "<group>"; };
 		B4D0A4A12B460D38007D5AF3 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		D30853302B228B5100F02655 /* MenuDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDate.swift; sourceTree = "<group>"; };
 		D30853322B228C5B00F02655 /* MenuDateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDateList.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885494EB2B4605D900141058 /* FirebaseStorage in Frameworks */,
+				88F48B042B49D16900E5BDF6 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +136,8 @@
 		D3BB70552AFD8ECF00EFAC23 /* DineUMD */ = {
 			isa = PBXGroup;
 			children = (
+				8824850D2B4A37DF002E13DE /* diningMenus.json */,
 				885494EE2B460E7B00141058 /* GoogleService-Info.plist */,
-				B4AAF3662B4619730090FEFE /* diningMenus.json */,
 				D3BB70562AFD8ECF00EFAC23 /* DineUMDApp.swift */,
 				D3BB70582AFD8ECF00EFAC23 /* ContentView.swift */,
 				D3BB70802AFD8FC000EFAC23 /* DiningData.swift */,
@@ -149,6 +153,7 @@
 				D3BB705A2AFD8ED000EFAC23 /* Assets.xcassets */,
 				D3BB705C2AFD8ED000EFAC23 /* Preview Content */,
 				885494EC2B46061200141058 /* StoreManager.swift */,
+				88F48B052B49D1E200E5BDF6 /* MenuScraper.swift */,
 			);
 			path = DineUMD;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			name = DineUMD;
 			packageProductDependencies = (
 				885494EA2B4605D900141058 /* FirebaseStorage */,
+				88F48B032B49D16900E5BDF6 /* SwiftSoup */,
 			);
 			productName = DineUMD;
 			productReference = D3BB70532AFD8ECF00EFAC23 /* DineUMD.app */;
@@ -284,6 +290,7 @@
 			mainGroup = D3BB704A2AFD8ECF00EFAC23;
 			packageReferences = (
 				885494E92B4605D900141058 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				88F48B022B49D16900E5BDF6 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = D3BB70542AFD8ECF00EFAC23 /* Products */;
 			projectDirPath = "";
@@ -302,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */,
-				B4AAF3672B4619730090FEFE /* diningMenus.json in Resources */,
+				8824850E2B4A37DF002E13DE /* diningMenus.json in Resources */,
 				D3BB705E2AFD8ED000EFAC23 /* Preview Assets.xcassets in Resources */,
 				D3BB705B2AFD8ED000EFAC23 /* Assets.xcassets in Resources */,
 			);
@@ -343,6 +350,7 @@
 				D3BB70572AFD8ECF00EFAC23 /* DineUMDApp.swift in Sources */,
 				D3DEC1172B042F840020CB66 /* MealDetail.swift in Sources */,
 				D3BB70852AFD90B100EFAC23 /* MenuDateDetail.swift in Sources */,
+				88F48B062B49D1E200E5BDF6 /* MenuScraper.swift in Sources */,
 				D30853372B22926700F02655 /* StationRow.swift in Sources */,
 				D3F19ED02AFD9E1F004E5131 /* DiningHallDetail.swift in Sources */,
 				B4D0A4A22B460D38007D5AF3 /* ItemDetail.swift in Sources */,
@@ -510,7 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DineUMD/Preview Content\"";
-				DEVELOPMENT_TEAM = 38G8Z8WL9Y;
+				DEVELOPMENT_TEAM = L27ZFRD7C3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -523,7 +531,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lottbros.DineUMD;
+				PRODUCT_BUNDLE_IDENTIFIER = lottbros.DineUMD2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -539,7 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DineUMD/Preview Content\"";
-				DEVELOPMENT_TEAM = 38G8Z8WL9Y;
+				DEVELOPMENT_TEAM = L27ZFRD7C3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -552,7 +560,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lottbros.DineUMD;
+				PRODUCT_BUNDLE_IDENTIFIER = lottbros.DineUMD2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -686,6 +694,14 @@
 				minimumVersion = 10.19.1;
 			};
 		};
+		88F48B022B49D16900E5BDF6 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -693,6 +709,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 885494E92B4605D900141058 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		88F48B032B49D16900E5BDF6 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88F48B022B49D16900E5BDF6 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
