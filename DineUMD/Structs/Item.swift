@@ -12,5 +12,5 @@ import CoreLocation
 struct Item: Hashable, Codable, Identifiable {
     var name: String
     var restrictions: [String]
-    var id = UUID()
+    var id: Int
 }

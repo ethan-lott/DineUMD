@@ -20,14 +20,9 @@ class StorageManager: ObservableObject {
         let localURL = URL(string: "DineUMD/diningMenus.json")!
         
         // Download to the local filesystem
-        _ = storageRef.write(toFile: localURL) { url, error in
-          if let error = error {
-            // Uh-oh, an error occurred!
-              print(error)
-          } else {
-            // Local file URL is returned
-              print("lowkey worked")
-          }
-        }
+//        storageRef.getDownloadURL()
+//          .then(url => fetch(url))
+//          .then(response => response.json())
+//          .then(data => localStorage.setItem("data", JSON.stringify(data)));
     }
 }
