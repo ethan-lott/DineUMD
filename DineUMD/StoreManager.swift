@@ -12,6 +12,7 @@ class StorageManager: ObservableObject {
     let storage = Storage.storage()
     
     func downloadMenus() {
+
         print("successfully called dowload function")
         // Create a storage reference
         let storageRef = storage.reference().child("gs://dineumd.appspot.com/menuFolder/diningMenus.json")
