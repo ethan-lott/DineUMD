@@ -91,14 +91,14 @@ class MenuScraper {
         var days: [MenuDate] = []
         var d_id = 0
         
-        for d_shift in 0...0 { // For each date
+        for d_shift in 0...6 { // For each date
             // Shift date
 //            let date = Date(timeIntervalSinceNow: TimeInterval(d_shift * 60 * 60 * 24))
+            let calendar = Calendar.current
             var dateq = DateComponents()
             dateq.year = 2023
             dateq.month = 11
             dateq.day = 1 + d_shift
-            let calendar = Calendar.current
             let date = calendar.date(from: dateq)!
             let year = calendar.component(.year, from: date)
             let month = calendar.component(.month, from: date)
@@ -122,8 +122,8 @@ class MenuScraper {
                         }
                     }
                 }
+                semaphore.wait()
             }
-            semaphore.wait()
             days.append(MenuDate(date: d_str, id: d_id, halls: halls))
             print(d_id)
             d_id += 1
@@ -183,7 +183,7 @@ class MenuScraper {
                         for restriction in try! recipe.select("img[class = nutri-icon]") {
                             restrictions.append(try! restriction.attr("title"))
                         }
-                        recipes.append(Item(name: recipeName, restrictions: restrictions, id: recipeId))
+                        recipes.append(Item(id: recipeId, name: recipeName, restrictions: restrictions))
                         recipeId += 1
                     }
                     if (!stationIds.keys.contains(locName)) {
@@ -199,10 +199,8 @@ class MenuScraper {
                 actMenus += 1
             }
             hallResult = DiningHall(name: hall, id: hall_nums[hall]!, meals: meals)
-            print("here1")
         } else {
             hallResult = DiningHall(name: hall, id: hall_nums[hall]!, meals: [])
-            print("here2")
         }
         completion(.success(hallResult))
     }
