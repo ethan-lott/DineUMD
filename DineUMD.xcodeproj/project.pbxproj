@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8824850E2B4A37DF002E13DE /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = 8824850D2B4A37DF002E13DE /* diningMenus.json */; };
+		882485102B4A3C53002E13DE /* SprapingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824850F2B4A3C53002E13DE /* SprapingBuffer.swift */; };
+		882485122B4A41CE002E13DE /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882485112B4A41CE002E13DE /* test.swift */; };
 		885494EB2B4605D900141058 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 885494EA2B4605D900141058 /* FirebaseStorage */; };
 		885494ED2B46061200141058 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885494EC2B46061200141058 /* StoreManager.swift */; };
 		885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 885494EE2B460E7B00141058 /* GoogleService-Info.plist */; };
@@ -56,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		8824850D2B4A37DF002E13DE /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = diningMenus.json; path = ../../../Downloads/diningMenus.json; sourceTree = "<group>"; };
+		8824850F2B4A3C53002E13DE /* SprapingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprapingBuffer.swift; sourceTree = "<group>"; };
+		882485112B4A41CE002E13DE /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		885494EC2B46061200141058 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		885494EE2B460E7B00141058 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88F48B052B49D1E200E5BDF6 /* MenuScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScraper.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				D3BB705C2AFD8ED000EFAC23 /* Preview Content */,
 				885494EC2B46061200141058 /* StoreManager.swift */,
 				88F48B052B49D1E200E5BDF6 /* MenuScraper.swift */,
+				8824850F2B4A3C53002E13DE /* SprapingBuffer.swift */,
+				882485112B4A41CE002E13DE /* test.swift */,
 			);
 			path = DineUMD;
 			sourceTree = "<group>";
@@ -349,6 +355,8 @@
 				885494ED2B46061200141058 /* StoreManager.swift in Sources */,
 				D3BB70572AFD8ECF00EFAC23 /* DineUMDApp.swift in Sources */,
 				D3DEC1172B042F840020CB66 /* MealDetail.swift in Sources */,
+				882485122B4A41CE002E13DE /* test.swift in Sources */,
+				882485102B4A3C53002E13DE /* SprapingBuffer.swift in Sources */,
 				D3BB70852AFD90B100EFAC23 /* MenuDateDetail.swift in Sources */,
 				88F48B062B49D1E200E5BDF6 /* MenuScraper.swift in Sources */,
 				D30853372B22926700F02655 /* StationRow.swift in Sources */,

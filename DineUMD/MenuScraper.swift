@@ -85,30 +85,28 @@ let meal_ids = [
 ]
 class MenuScraper {
     
-    func getData() -> [Dictionary<String,Any>] {
+    func getData(completion: @escaping (Result<[MenuDate], Error>) -> Void) {
         let startTime = DispatchTime.now()
         print("start")
-        var days: [Dictionary<String,Any>] = []
+        var days: [MenuDate] = []
         var d_id = 0
-        var item_id = 0
         
-        for d_shift in 0...6 { // For each date
+        for d_shift in 0...0 { // For each date
             // Shift date
 //            let date = Date(timeIntervalSinceNow: TimeInterval(d_shift * 60 * 60 * 24))
             var dateq = DateComponents()
             dateq.year = 2023
             dateq.month = 11
-            dateq.day = 1
+            dateq.day = 1 + d_shift
             let calendar = Calendar.current
             let date = calendar.date(from: dateq)!
             let year = calendar.component(.year, from: date)
             let month = calendar.component(.month, from: date)
             let day = calendar.component(.day, from: date)
             let d_str = "\(month)/\(day)/\(year)"
-            var halls: [Dictionary<String,Any>] = []
+            var halls: [DiningHall] = []
             let semaphore = DispatchSemaphore(value: 0)
             for (hall, hall_num) in hall_nums {
-                var html = ""
                 self.getHTML(aURL: "https://nutrition.umd.edu/?locationNum=\(hall_num)&dtdate=\(d_str)") { result in
                     if result.isEmpty {
                         print("error getting the html")
@@ -116,7 +114,7 @@ class MenuScraper {
                         self.parseHTML(html: result, hall: hall, hallNum: hall_num) { result in
                             switch result {
                                 case .success(let data):
-                                    halls = data
+                                halls.append(data)
                                 case .failure(let error):
                                     print("Error: \(error.localizedDescription)")
                                 }
@@ -126,7 +124,7 @@ class MenuScraper {
                 }
             }
             semaphore.wait()
-            days.append(["date": d_str, "id": d_id, "halls": halls])
+            days.append(MenuDate(date: d_str, id: d_id, halls: halls))
             print(d_id)
             d_id += 1
         }
@@ -136,8 +134,9 @@ class MenuScraper {
         let executionTime = Double(nanoTime) / 1_000_000_000
 
         print("Execution time: \(executionTime) seconds")
-        return days
+        completion(.success(days))
     }
+    
     private func getHTML(aURL: String, completion: ( (String) -> (Void) )?) {
                 let url = URL(string: aURL)!
                 let task = URLSession.shared.dataTask(with: url)
@@ -150,7 +149,8 @@ class MenuScraper {
                 }
                 task.resume()
     }
-    private func parseHTML(html: String, hall: String, hallNum: Int, completion: @escaping (Result<[Dictionary<String,Any>], Error>) -> Void) {
+    
+    private func parseHTML(html: String, hall: String, hallNum: Int, completion: @escaping (Result<DiningHall, Error>) -> Void) {
         var stationIds: Dictionary<String, Int>
         if hall == "South Campus" {
             stationIds = SouthCampus_IDs
@@ -160,9 +160,9 @@ class MenuScraper {
             stationIds = Yahentamitsi_IDs
         }
         var recipeId = 0
-        var halls: [Dictionary<String,Any>] = []
+        var hallResult: DiningHall
         let doc: Document = try! SwiftSoup.parseBodyFragment(html)
-        var meals: [Dictionary<String,Any>] = []
+        var meals: [Meal] = []
         let mealPanels = try! doc.select("div[role = tabpanel]")
         if (!mealPanels.isEmpty()) {
             var mealNames: [String] = []
@@ -173,35 +173,59 @@ class MenuScraper {
             }
             var actMenus = 0
             for meal in mealPanels {
-                var locations: [Dictionary<String,Any>] = []
+                var locations: [Station] = []
                 for loc in try! meal.select("div[class = card]") {
                     let locName = try! loc.select("h5[class = card-title]").text()
-                    var recipes: [Dictionary<String,Any>] = []
+                    var recipes: [Item] = []
                     for recipe in try! loc.select("div[class = row menu-item-row]") {
                         let recipeName = try! recipe.select("a[class = menu-item-name]").text()
                         var restrictions: [String] = []
                         for restriction in try! recipe.select("img[class = nutri-icon]") {
                             restrictions.append(try! restriction.attr("title"))
                         }
-                        recipes.append(["name": recipeName, "id": recipeId, "restrictions": restrictions])
+                        recipes.append(Item(name: recipeName, restrictions: restrictions, id: recipeId))
                         recipeId += 1
                     }
                     if (!stationIds.keys.contains(locName)) {
                         stationIds[locName] = stationIds.values.max()! + 10
                     }
-                    locations.append(["name": locName, "id": stationIds[locName]!, "items": recipes])
+                    locations.append(Station(name: locName, id: stationIds[locName]!, items: recipes))
                 }
-                meals.append(["name": mealNames[actMenus], "id": meal_ids[mealNames[actMenus]]!, "stations": locations])
+                meals.append(Meal(id: meal_ids[mealNames[actMenus]]!, name: mealNames[actMenus], stations: locations))
                 actMenus += 1
             }
             while (actMenus < mealNames.count) {
-                meals.append(["name": mealNames[actMenus], "id": meal_ids[mealNames[actMenus]]!, "stations": "No Data Available"])
+                meals.append(Meal(id: meal_ids[mealNames[actMenus]]!, name: mealNames[actMenus], stations: []))
                 actMenus += 1
             }
-            halls.append(["name": hall, "id": hall_nums[hall]!, "meals": meals])
+            hallResult = DiningHall(name: hall, id: hall_nums[hall]!, meals: meals)
+            print("here1")
         } else {
-            halls.append(["name": hall, "id": hall_nums[hall]!, "meals": "No Data Available"])
+            hallResult = DiningHall(name: hall, id: hall_nums[hall]!, meals: [])
+            print("here2")
         }
-        completion(.success(halls))
+        completion(.success(hallResult))
     }
+    
+    func writeToJSONFile(data: [MenuDate]) {
+        // Get the document directory path
+        if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            // Create a file URL
+            let fileURL = documentsDirectory.appendingPathComponent("diningMenus.json")
+
+            do {
+                // Convert your data to JSON
+                let jsonData = try JSONEncoder().encode(data)
+
+                // Write the JSON data to the file
+                try jsonData.write(to: fileURL, options: .atomic)
+
+//                print("Data written to: \(fileURL)")
+            } catch {
+                print("Error writing JSON data: \(error)")
+            }
+        }
+    }
+    
 }
+

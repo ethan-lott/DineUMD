@@ -10,18 +10,15 @@ import Firebase
 
 @main
 struct DineUMDApp: App {
+    
     init() {
-//        FirebaseApp.configure()
-//        let sm = StorageManager()
-//        sm.downloadMenus()
-        let ms = MenuScraper()
-        ms.getData()
     }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(DiningData())
+//            ContentView()
+//                .environmentObject(DiningData())
+            SprapingBuffer()
         }
     }
 }
