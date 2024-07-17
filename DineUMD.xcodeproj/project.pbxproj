@@ -55,7 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8824850D2B4A37DF002E13DE /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = diningMenus.json; path = ../../../Downloads/diningMenus.json; sourceTree = "<group>"; };
+		8824850D2B4A37DF002E13DE /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningMenus.json; sourceTree = "<group>"; };
 		8824850F2B4A3C53002E13DE /* SprapingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprapingBuffer.swift; sourceTree = "<group>"; };
 		885494EE2B460E7B00141058 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88F48B052B49D1E200E5BDF6 /* MenuScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScraper.swift; sourceTree = "<group>"; };
