@@ -17,16 +17,13 @@ struct MenuDateDetail: View {
     var body: some View {
         
         NavigationSplitView {
-            List {
                 ForEach(menuDate.halls) { diningHall in
                     NavigationLink {
                         DiningHallDetail(diningHall: diningHall, menuDate: menuDate)
                     } label: {
-                        Text(diningHall.name)
-//                        DiningHallRow(diningHall: diningHall)
+                        DiningHallRow(diningHall: diningHall)
                     }
                 }
-            }
             .navigationTitle("Dining Halls")
         } detail: {
             Text("Select a Dining Hall")
