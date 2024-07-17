@@ -93,13 +93,13 @@ class MenuScraper {
         
         for d_shift in 0...6 { // For each date
             // Shift date
-//            let date = Date(timeIntervalSinceNow: TimeInterval(d_shift * 60 * 60 * 24))
             let calendar = Calendar.current
-            var dateq = DateComponents()
-            dateq.year = 2023
-            dateq.month = 11
-            dateq.day = 1 + d_shift
-            let date = calendar.date(from: dateq)!
+            let date = Date(timeIntervalSinceNow: TimeInterval(d_shift * 60 * 60 * 24))
+//            var dateq = DateComponents()
+//            dateq.year = 2023
+//            dateq.month = 11
+//            dateq.day = 1 + d_shift
+//            let date = calendar.date(from: dateq)!
             let year = calendar.component(.year, from: date)
             let month = calendar.component(.month, from: date)
             let day = calendar.component(.day, from: date)
