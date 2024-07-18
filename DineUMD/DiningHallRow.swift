@@ -12,19 +12,14 @@ struct DiningHallRow: View {
     
     var body: some View {
         VStack {
-            //            diningHall.image
-            //                .resizable()
-            //                .frame(width:50, height:50)
             Spacer()
-            Button(diningHall.name, action: {})
-                .buttonStyle(.borderedProminent)
-                .tint(.red)
-                .controlSize(.large)
-            //            if diningHall.isFavorite {
-            //                Image(systemName: "star.fill")
-            //                    .foregroundStyle(.yellow)
-            //            }
-            
+            ZStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(.red)
+                Text(diningHall.name)
+                    .tint(.black)
+                    .controlSize(.large)
+            }
             Spacer()
         }
     }
