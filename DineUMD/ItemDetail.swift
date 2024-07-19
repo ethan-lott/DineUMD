@@ -21,6 +21,6 @@ struct ItemDetail: View {
 
 #Preview {
     let diningData = DiningData()
-    return ItemDetail(item: diningData.menuDates[0].halls[0].meals[0].stations[0].items[1], station: diningData.menuDates[0].halls[0].meals[0].stations[0])
+    return ItemDetail(item: diningData.menuDates[0].halls[1].meals[0].stations[0].items[1], station: diningData.menuDates[0].halls[1].meals[0].stations[0])
         .environment(diningData)
 }

@@ -55,7 +55,9 @@ struct SprapingBuffer: View {
                     }
                 }
             } else {
-                ContentView().environmentObject(DiningData())
+//                ContentView().environmentObject(DiningData())
+                MenuDateDetail(menuDate: DiningData().menuDates[0])
+                    .environment(DiningData())
             }
         }
     }

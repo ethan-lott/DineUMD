@@ -45,6 +45,6 @@ struct MealDetail: View {
 
 #Preview {
     let diningData = DiningData()
-    return MealDetail(diningHall: diningData.menuDates[0].halls[0], meal: diningData.menuDates[0].halls[0].meals[0])
+    return MealDetail(diningHall: diningData.menuDates[0].halls[1], meal: diningData.menuDates[0].halls[1].meals[0])
         .environment(diningData)
 }

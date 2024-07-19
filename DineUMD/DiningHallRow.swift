@@ -11,18 +11,16 @@ struct DiningHallRow: View {
     var diningHall: DiningHall
     
     var body: some View {
-        HStack {
-//            diningHall.image
-//                .resizable()
-//                .frame(width:50, height:50)
-            Text(diningHall.name)
-            
+        VStack {
             Spacer()
-            
-//            if diningHall.isFavorite {
-//                Image(systemName: "star.fill")
-//                    .foregroundStyle(.yellow)
-//            }
+            ZStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(.red)
+                Text(diningHall.name)
+                    .tint(.black)
+                    .controlSize(.large)
+            }
+            Spacer()
         }
     }
 }
@@ -32,5 +30,6 @@ struct DiningHallRow: View {
     return Group {
         DiningHallRow(diningHall: diningHalls[0])
         DiningHallRow(diningHall: diningHalls[1])
+        DiningHallRow(diningHall: diningHalls[2])
     }
 }
