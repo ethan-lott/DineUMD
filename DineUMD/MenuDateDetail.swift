@@ -61,7 +61,8 @@ struct MenuDateDetail: View {
     
     var body: some View {
         NavigationSplitView {
-                List(menuDate.halls) { diningHall in
+            VStack {
+                ForEach(menuDate.halls) { diningHall in
                     NavigationLink {
                         if let meal = decideMeal(date: menuDate, hall: diningHall) {
                             DiningHallDetail(diningHall: diningHall, menuDate: menuDate, meal: meal)
@@ -72,23 +73,24 @@ struct MenuDateDetail: View {
                         DiningHallRow(diningHall: diningHall)
                     }
                 }
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        HStack(spacing: 0) {
-                            Text("Dine ")
-                            Button(action: {
-                                showingDatePicker.toggle()
-                            }) {
-                                Text("Now")
-                                    .foregroundColor(.black) // Customize the appearance as needed
-                            }
-                            .sheet(isPresented: $showingDatePicker) {
-                                DatePicker("Choose day and time to view", selection: $selectedDate)
-                            }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    HStack(spacing: 0) {
+                        Text("Dine ")
+                        Button(action: {
+                            showingDatePicker.toggle()
+                        }) {
+                            Text("Now")
+                                .foregroundColor(.black) // Customize the appearance as needed
                         }
-                        .font(.headline) // Customize the font to match the navigation title style
+                        .sheet(isPresented: $showingDatePicker) {
+                            DatePicker("Choose day and time to view", selection: $selectedDate)
+                        }
                     }
+                    .font(.headline) // Customize the font to match the navigation title style
                 }
+            }
         } detail: {
             Text("Select a Dining Hall")
         }
