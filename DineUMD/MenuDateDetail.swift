@@ -64,7 +64,7 @@ struct MenuDateDetail: View {
                 List(menuDate.halls) { diningHall in
                     NavigationLink {
                         if let meal = decideMeal(date: menuDate, hall: diningHall) {
-                            MealDetail(diningHall: diningHall, meal: meal)
+                            DiningHallDetail(diningHall: diningHall, menuDate: menuDate, meal: meal)
                         } else {
                             Text(diningHall.name + " is closed today.")
                         }

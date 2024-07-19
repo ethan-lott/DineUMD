@@ -13,9 +13,13 @@ struct ItemDetail: View {
     var station: Station
     
     var body: some View {
-        Text(item.name)
-            .bold()
-        Text(item.restrictions.description)
+        NavigationSplitView {
+            Text(item.restrictions.description)
+        } detail: {
+            Text("Item restrictions.")
+        }
+        .navigationTitle(item.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

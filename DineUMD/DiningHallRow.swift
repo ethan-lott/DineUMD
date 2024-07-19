@@ -28,7 +28,6 @@ struct DiningHallRow: View {
 #Preview {
     let diningHalls = DiningData().menuDates[0].halls
     return Group {
-        DiningHallRow(diningHall: diningHalls[0])
         DiningHallRow(diningHall: diningHalls[1])
         DiningHallRow(diningHall: diningHalls[2])
     }

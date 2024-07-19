@@ -25,7 +25,6 @@ struct StationDetail: View {
 //                      StationRow(station: station)
                 }
             }
-            .navigationTitle("Menu Items")
         } detail: {
             Text("Select a Menu Item")
         }

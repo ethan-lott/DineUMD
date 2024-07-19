@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8824850E2B4A37DF002E13DE /* diningMenus.json in Resources */ = {isa = PBXBuildFile; fileRef = 8824850D2B4A37DF002E13DE /* diningMenus.json */; };
 		882485102B4A3C53002E13DE /* SprapingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824850F2B4A3C53002E13DE /* SprapingBuffer.swift */; };
 		885494EB2B4605D900141058 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 885494EA2B4605D900141058 /* FirebaseStorage */; };
 		885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 885494EE2B460E7B00141058 /* GoogleService-Info.plist */; };
@@ -55,7 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8824850D2B4A37DF002E13DE /* diningMenus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diningMenus.json; sourceTree = "<group>"; };
 		8824850F2B4A3C53002E13DE /* SprapingBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprapingBuffer.swift; sourceTree = "<group>"; };
 		885494EE2B460E7B00141058 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88F48B052B49D1E200E5BDF6 /* MenuScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScraper.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 		D3BB70552AFD8ECF00EFAC23 /* DineUMD */ = {
 			isa = PBXGroup;
 			children = (
-				8824850D2B4A37DF002E13DE /* diningMenus.json */,
 				885494EE2B460E7B00141058 /* GoogleService-Info.plist */,
 				D3BB70562AFD8ECF00EFAC23 /* DineUMDApp.swift */,
 				D3BB70582AFD8ECF00EFAC23 /* ContentView.swift */,
@@ -309,7 +306,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				885494EF2B460E7C00141058 /* GoogleService-Info.plist in Resources */,
-				8824850E2B4A37DF002E13DE /* diningMenus.json in Resources */,
 				D3BB705E2AFD8ED000EFAC23 /* Preview Assets.xcassets in Resources */,
 				D3BB705B2AFD8ED000EFAC23 /* Assets.xcassets in Resources */,
 			);
@@ -518,7 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DineUMD/Preview Content\"";
-				DEVELOPMENT_TEAM = L27ZFRD7C3;
+				DEVELOPMENT_TEAM = 38G8Z8WL9Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -550,7 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DineUMD/Preview Content\"";
-				DEVELOPMENT_TEAM = L27ZFRD7C3;
+				DEVELOPMENT_TEAM = 38G8Z8WL9Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
