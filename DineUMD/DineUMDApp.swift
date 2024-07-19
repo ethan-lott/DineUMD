@@ -15,8 +15,6 @@ struct DineUMDApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//                .environmentObject(DiningData())
             SprapingBuffer()
         }
     }
