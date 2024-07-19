@@ -13,14 +13,18 @@ struct ItemDetail: View {
     var station: Station
     
     var body: some View {
-        Text(item.name)
-            .bold()
-        Text(item.restrictions.description)
+        NavigationSplitView {
+            Text(item.restrictions.description)
+        } detail: {
+            Text("Item restrictions.")
+        }
+        .navigationTitle(item.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
     let diningData = DiningData()
-    return ItemDetail(item: diningData.menuDates[0].halls[0].meals[0].stations[0].items[1], station: diningData.menuDates[0].halls[0].meals[0].stations[0])
+    return ItemDetail(item: diningData.menuDates[0].halls[1].meals[0].stations[0].items[1], station: diningData.menuDates[0].halls[1].meals[0].stations[0])
         .environment(diningData)
 }

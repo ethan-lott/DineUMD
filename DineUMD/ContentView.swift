@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(DiningData.self) var diningData
+    
     var body: some View {
-        MenuDateList()
+        MenuDateDetail(menuDate: diningData.menuDates[0])
     }
 }
 
 #Preview {
-    MenuDateList()
+    MenuDateDetail(menuDate: DiningData().menuDates[0])
         .environment(DiningData())
 }

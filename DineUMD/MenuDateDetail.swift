@@ -19,13 +19,15 @@ struct MenuDateDetail: View {
         NavigationSplitView {
             List {
                 ForEach(menuDate.halls) { diningHall in
-                    NavigationLink {
-                        DiningHallDetail(diningHall: diningHall, menuDate: menuDate)
-                    } label: {
-                        Text(diningHall.name)
-//                        DiningHallRow(diningHall: diningHall)
+                    if (diningHall.meals.count > 0) {
+                        NavigationLink {
+                            DiningHallDetail(diningHall: diningHall, menuDate: menuDate, meal: diningHall.meals[1])
+                        } label: {
+                            DiningHallRow(diningHall: diningHall)
+                        }
                     }
                 }
+                
             }
             .navigationTitle("Dining Halls")
         } detail: {

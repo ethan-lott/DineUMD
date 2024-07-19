@@ -19,7 +19,7 @@ struct StationRow: View {
 }
 
 #Preview {
-    let stations = DiningData().menuDates[0].halls[0].meals[0].stations
+    let stations = DiningData().menuDates[0].halls[1].meals[0].stations
     return Group {
         StationRow(station: stations[0])
         StationRow(station: stations[1])
