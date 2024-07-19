@@ -60,7 +60,7 @@ struct MenuDateDetail: View {
     
     
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             VStack {
                 ForEach(menuDate.halls) { diningHall in
                     NavigationLink {
@@ -91,8 +91,6 @@ struct MenuDateDetail: View {
                     .font(.headline) // Customize the font to match the navigation title style
                 }
             }
-        } detail: {
-            Text("Select a Dining Hall")
         }
 //        .toolbar {
 //            ToolbarItem(placement: .topBarLeading) {

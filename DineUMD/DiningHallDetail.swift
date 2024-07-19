@@ -81,25 +81,10 @@ struct DiningHallDetail: View {
         @Bindable var diningData = diningData
         let bp: String = (diningHall.name == "Yahentamitsi") ? "Y_bp" : ((diningHall.name == "251 North") ? "North_bp" : "SC_bp")
         
-//        NavigationSplitView {
-//            List {
-//                ForEach(diningHall.meals) { meal in
-//                    NavigationLink {
-//                        MealDetail(diningHall: diningHall, meal: meal)
-//                    } label: {
-//                        Text(meal.name)
-//                    }
-//                }
-//            }
-//            .navigationTitle("Meals")
-//        } detail: {
-//            Text("Select a Meal")
-//        }
-//        .navigationTitle(diningHall.name)
-//        .navigationBarTitleDisplayMode(.inline)
-        
-        NavigationSplitView {
+        NavigationStack {
             VStack {
+                Text("Select a station to view its menu.")
+                Spacer()
                 ScrollView(.horizontal) {
                     Image(bp)
                         .resizable()
@@ -107,8 +92,7 @@ struct DiningHallDetail: View {
                         .overlay(stationButtons())
                 }
             }
-        } detail: {
-            Text("Select a station.")
+            
         }
         .navigationTitle(diningHall.name)
         .navigationBarTitleDisplayMode(.inline)
