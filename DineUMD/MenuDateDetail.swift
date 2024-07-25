@@ -9,13 +9,14 @@ import SwiftUI
 
 struct MenuDateDetail: View {
     @Environment(DiningData.self) var diningData
-    let menuDate: MenuDate
+    @State var menuDate: MenuDate
     var menuDateIndex: Int {
         diningData.menuDates.firstIndex(where: { $0.id == menuDate.id })!
     }
     
     @State private var showingDatePicker = false
-    @State private var selectedDate = Date()
+    @State var selectedDate: Date = Date()
+    @State var selectedMeal: Int = 0
     
     func decideMeal(date: MenuDate, hall: DiningHall) -> Meal? {
         let num_meals = hall.meals.count
@@ -23,14 +24,12 @@ struct MenuDateDetail: View {
             return nil
         }
         var meal_idx = 0
-        // Get the current date and time
-        let currentDate = Date()
         
         // Create a calendar instance
         let calendar = Calendar.current
         
         // Extract components from the current date
-        let components = calendar.dateComponents([.hour, .minute], from: currentDate)
+        let components = calendar.dateComponents([.hour, .minute], from: selectedDate)
         if let hour = components.hour, let minute = components.minute {
             let time_mins = hour * 60 + minute
             // if before 9:30 set meal to breakfast or brunch
@@ -57,8 +56,6 @@ struct MenuDateDetail: View {
         return hall.meals[meal_idx]
     }
     
-    
-    
     var body: some View {
         NavigationStack {
             VStack {
@@ -84,29 +81,18 @@ struct MenuDateDetail: View {
                             Text("Now")
                                 .foregroundColor(.black) // Customize the appearance as needed
                         }
-                        .sheet(isPresented: $showingDatePicker) {
-                            DatePicker("Choose day and time to view", selection: $selectedDate)
+                        .popover(isPresented: $showingDatePicker) {
+                            datePickerView(selectedDate: $selectedDate, selectedMeal: $selectedMeal)
+                                .onDisappear() {
+                                    let _ = print(selectedMeal)
+                                    let _ = print(selectedMeal)
+                                }
                         }
                     }
                     .font(.headline) // Customize the font to match the navigation title style
                 }
             }
         }
-//        .toolbar {
-//            ToolbarItem(placement: .topBarLeading) {
-//                HStack(spacing: 0) {
-//                    Text("Dine ")
-//                    Button(action: {
-//                        // Custom action for "Now"
-//                        print("Now button tapped")
-//                    }) {
-//                        Text("Now")
-//                            .foregroundColor(.black) // Customize the appearance as needed
-//                    }
-//                }
-//                .font(.headline) // Customize the font to match the navigation title style
-//            }
-//        }
     }
 }
 
