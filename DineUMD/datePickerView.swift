@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct datePickerView: View {
-    @Binding var selectedDate: Date
+    @Binding var selectedDateIdx: Int?
+    @Binding var selectedMealIdx: Int?
+    
+    @State var selectedDate: Date = Date()
     private let oneWeekFromNow = Calendar.current.date(byAdding: .day, value: 6, to: Date())!
-    @Binding var selectedMeal: Int
     private let meals = ["Breakfast","Lunch","Dinner"]
     
     var body: some View {
@@ -18,19 +20,22 @@ struct datePickerView: View {
             Text("Choose a new date and meal")
             DatePicker("", selection: $selectedDate, in: Date()...oneWeekFromNow, displayedComponents: [.date])
                 .datePickerStyle(GraphicalDatePickerStyle())
+                .onReceive([selectedDate].publisher.first(), perform: { _ in
+                    let selectedDateIdx = Calendar.current.dateComponents([.day], from: Date(), to: selectedDate).day
+                })
                 .padding()
-            Picker("Meal", selection: $selectedMeal) {
-                ForEach(meals, id: \.self) { meal in
-                    Text(meal)
+            Picker("Meal", selection: $selectedMealIdx) {
+                ForEach(0..<meals.count, id: \.self) {
+                    Text(meals[$0])
+                        .tag($0)
                 }
             }
             .pickerStyle(.segmented)
-            .padding()
-        }
+            .padding()        }
     }
 }
 
 #Preview {
-    datePickerView(selectedDate: .constant(Date()), selectedMeal: .constant(0))
+    datePickerView(selectedDateIdx: .constant(0), selectedMealIdx: .constant(0))
 }
 
