@@ -16,20 +16,17 @@ struct StationDetail: View {
     }
     
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             List(station.items) {item in
                 NavigationLink {
                     ItemDetail(item: item, station: station)
                 } label: {
                     Text(item.name)
-//                      StationRow(station: station)
                 }
             }
-        } detail: {
-            Text("Select a Menu Item")
+            .navigationTitle(station.name)
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle(station.name)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

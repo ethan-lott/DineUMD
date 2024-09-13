@@ -17,7 +17,6 @@ func load<T: Decodable>(_ filename: String) -> T {
     if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
         // Create a file URL for the diningMenus.json file in the document directory
         let file = documentsDirectory.appendingPathComponent(filename)
-        
         do {
             // Read the JSON data from the file
             data = try Data(contentsOf: file)

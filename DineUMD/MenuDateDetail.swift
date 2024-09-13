@@ -92,25 +92,11 @@ struct MenuDateDetail: View {
                 }
             }
         }
-//        .toolbar {
-//            ToolbarItem(placement: .topBarLeading) {
-//                HStack(spacing: 0) {
-//                    Text("Dine ")
-//                    Button(action: {
-//                        // Custom action for "Now"
-//                        print("Now button tapped")
-//                    }) {
-//                        Text("Now")
-//                            .foregroundColor(.black) // Customize the appearance as needed
-//                    }
-//                }
-//                .font(.headline) // Customize the font to match the navigation title style
-//            }
-//        }
     }
 }
 
 #Preview {
-    MenuDateDetail(menuDate: DiningData().menuDates[0])
-        .environment(DiningData())
+    let diningData = DiningData()
+    return MenuDateDetail(menuDate: diningData.menuDates[0])
+        .environment(diningData)
 }
