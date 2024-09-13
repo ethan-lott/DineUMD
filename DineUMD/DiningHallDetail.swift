@@ -49,7 +49,23 @@ struct DiningHallDetail: View {
             "Mongolian Grill": ["w": 0.154, "h": 0.055, "x": 0.615, "y": 0.09]
         ],
         "251 North": [
-            "": [:]
+            //"Purple Zone": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            "Purple Zone-ALL DAY": ["w": 0.09, "h": 0.08, "x": 0.905, "y": 0.125],
+            //"Smash Deli": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            "Smash Burger": ["w": 0.11, "h": 0.12, "x": 0.777, "y": 0.143],
+            //"Ciao Chilled Salads": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            //"Ciao Pizza": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            //"Ciao Pasta": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            "Ciao Entree": ["w": 0.086, "h": 0.1, "x": 0.59, "y": 0.46],
+            "Chef's Table Mains": ["w": 0.175, "h": 0.11, "x": 0.178, "y": 0.265],
+            //"Chef's Table Extras": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            //"Chef's Table Vegetarian": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            //"Halal at Chef's Table": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            //"Harvest Entree": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            "Harvest Greens": ["w": 0.22, "h": 0.08, "x": 0.22, "y": 0.6],
+            //"Harvest Vegan": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            //"Soups": ["w": 0.09, "h": 0.055, "x": 0.165, "y": 0.465],
+            "Scoops Homemade Ice Cream": ["w": 0.15, "h": 0.07, "x": 0.65, "y": 0.85]
         ]
     ]
     
@@ -100,6 +116,6 @@ struct DiningHallDetail: View {
 
 #Preview {
     let diningData = DiningData()
-    return DiningHallDetail(diningHall: diningData.menuDates[0].halls[0], menuDate: diningData.menuDates[0], meal: diningData.menuDates[0].halls[0].meals[1])
+    return DiningHallDetail(diningHall: diningData.menuDates[0].halls[2], menuDate: diningData.menuDates[0], meal: diningData.menuDates[0].halls[2].meals[1])
         .environment(diningData)
 }
