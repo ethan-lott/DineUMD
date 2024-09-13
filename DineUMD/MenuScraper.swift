@@ -210,7 +210,7 @@ class MenuScraper {
         if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             // Create a file URL
             let fileURL = documentsDirectory.appendingPathComponent("diningMenus.json")
-
+            print(fileURL)
             do {
                 // Convert your data to JSON
                 let jsonData = try JSONEncoder().encode(data)
