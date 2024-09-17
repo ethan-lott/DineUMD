@@ -9,22 +9,25 @@ import SwiftUI
 
 struct StationDetail: View {
     @Environment(DiningData.self) var diningData
-    var station: Station
+    var stationList: [Station]
     var meal: Meal
-    var stationIndex: Int {
-        meal.stations.firstIndex(where: { $0.id == station.id })!
-    }
+    var stationIndeces: [Int] = [meal.stations.firstIndex(where: { $0.id == station.id })! for station in stationList]
     
     var body: some View {
+        var itemList: [Item] = []
+        for station in stationList {
+            stationIndeces.append(meal.stations.firstIndex(where: { $0.id == station.id })!)
+            itemList += station.items
+        }
         NavigationStack {
-            List(station.items) {item in
+            List(itemList) {item in
                 NavigationLink {
-                    ItemDetail(item: item, station: station)
+                    ItemDetail(item: item, station: item.station)
                 } label: {
                     Text(item.name)
                 }
             }
-            .navigationTitle(station.name)
+            .navigationTitle(stationList[0].name)
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -32,6 +35,6 @@ struct StationDetail: View {
 
 #Preview {
     let diningData = DiningData()
-    return StationDetail(station: diningData.menuDates[0].halls[1].meals[0].stations[0], meal: diningData.menuDates[0].halls[1].meals[0])
+    return StationDetail(stationList: [diningData.menuDates[0].halls[1].meals[0].stations[0]], meal: diningData.menuDates[0].halls[1].meals[0])
         .environment(diningData)
 }

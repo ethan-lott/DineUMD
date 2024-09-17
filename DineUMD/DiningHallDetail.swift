@@ -77,7 +77,7 @@ struct DiningHallDetail: View {
             ForEach(meal.stations) { station in
                 if (buttonProportions[diningHall.name]!.keys.contains(station.name)) {
                     NavigationLink {
-                        StationDetail(station: station, meal: meal)
+                        StationDetail(stationList: [station], meal: meal)
                     } label: {
                         StationButton(station: station)
                     }
